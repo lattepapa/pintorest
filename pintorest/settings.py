@@ -133,5 +133,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATICFILES_DIRS = [
     BASE_DIR + "/static",
-    '/var/www/static/',
+    # '/var/www/static/',
 ]

@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+    .hell {
+        background-color: pink;
+        height: 3rem;
+        width: 3rem;
+    }
+</style>
 <div style="height: 20rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-    Welcome Hell
+    <h1>Welcome Hell</h1>
+
+    <div class="hell" style="display: block;">block</div>
+    <div class="hell" style="display: inline;">inline</div>
+    <div class="hell" style="display: inline-block;">inline-block</div>
+    <div class="hell" style="display: none;">none</div>
+    <div class="hell">default</div>
 </div>
 {% endblock%}

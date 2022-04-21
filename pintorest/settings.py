@@ -61,7 +61,8 @@ ROOT_URLCONF = 'pintorest.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # /templates 경로에 있는 파일들을 BASE_DIR로 지정한다
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

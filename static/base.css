@@ -1,0 +1,21 @@
+.pintorest-header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.pintorest-header-logo {
+    font-family: 'Indie Flower', cursive;
+}
+
+.pintorest-footer {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.pintorest-footer-logo {
+    font-family: 'Indie Flower', cursive;
+}
+
+.pintorest-footer-button {
+    font-size: 0.6rem;
+}

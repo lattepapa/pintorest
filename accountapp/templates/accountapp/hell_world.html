@@ -25,6 +25,12 @@
     <h1>
         {{ isClicked.testText }}
     </h1>
+    {% else %}
+        {% for el in showAll %}
+            <h1>
+                {{ el.testText }}
+            </h1>
+        {% endfor %}
     {% endif %}
 </div>
 {% endblock%}

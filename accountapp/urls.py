@@ -1,8 +1,8 @@
 from django.urls import path
 
-from accountapp.views import hello_world
+from accountapp.views import hell_world
 
 app_name = 'accountapp'
 urlpatterns=[
-    path('hello_world/', hello_world, name='hello_world'),
+    path('hell_world/', hell_world, name='hell_world'),
 ]

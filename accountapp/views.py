@@ -1,6 +1,9 @@
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.views.generic import CreateView
 
 from accountapp.models import HellWorld
 
@@ -22,3 +25,12 @@ def hell_world(request):
         # 3. 데이터베이스의 HellWorld 객체의 모든 리스트를 추출
         hell_world_list = HellWorld.objects.all()
         return render(request, 'accountapp/hell_world.html', context={'showAll': hell_world_list})
+
+class AccountCreateView(CreateView):
+    # Django에서 기본 제공하는 모델인 User
+    model = User
+    # Django에서 기본 제공하는 User 생성 폼
+    form_class = UserCreationForm
+    # reverse()는 함수형 베이스 뷰에서, reverse_lazy는 클래스형 베이스 뷰에서 사용
+    success_url = reverse_lazy('accountapp:hell_world')
+    template_name = 'accountapp/create.html'
